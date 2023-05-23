@@ -7,4 +7,3 @@ for i in arr1.keys():
     if i==arr1[i]:
         cnt+=1
 print(cnt)
-    
