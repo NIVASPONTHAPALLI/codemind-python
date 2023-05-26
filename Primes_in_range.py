@@ -1,16 +1,16 @@
 import math
-def is_prime(n):
+def primes(n):
     if n<2:
         return False
-    sq=int(math.sqrt(n))
-    for i in range(2,sq+1):
+    for i in range(2,int(math.sqrt(n))+1):
         if n%i==0:
             return False
     return True
+
+lower = int(input())
+upper = int(input())
 cnt=0
-n=int(input())
-p=int(input())
-for i in range(n,p+1):
-    if is_prime(i):
+for i in range(lower,upper+1):
+    if primes(i):
         cnt+=1
 print(cnt)
