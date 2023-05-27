@@ -11,4 +11,4 @@ l=[]
 for i in p:
     p=vowel(i)
     l.append(p)
-print(l.count(max(l)))
+print(l.count(min(l)))
