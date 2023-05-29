@@ -1,0 +1,5 @@
+n=list(map(str,input().split()))
+l=''.join(n)
+l1=min(l)
+l2=max(l)
+print(l1,l.count(l1),l2,l.count(l2))
