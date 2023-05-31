@@ -1,35 +1,19 @@
-import math
- 
-# Method to check whether a number is disarium or not
-def check(n) :
- 
-    # Count digits in n.
-    count_digits = len(str(n))
-      
-    # Compute sum of terms like digit multiplied by
-    # power of position
-    sum = 0  # Initialize sum of terms
-    x = n
-    while (x!=0) :
- 
-        # Get the rightmost digit
-        r = x % 10
-          
-        # Sum the digits by powering according to
-        # the positions
-        sum = (int) (sum + math.pow(r, count_digits))
-        count_digits = count_digits - 1
-        x = x//10
-        
-    # If sum is same as number, then number is
-    if sum == n :
-        return 1
-    else :
-        return 0
-       
-# Driver method
-n =int(input())
-if (check(n) == 1) :
-    print ("True")
-else :
-    print ("False")
+n=(int(input()))
+t=n
+cnt=0
+c=0
+l=0
+i=1
+while n!=0:
+    p=n%10
+    cnt=cnt*10+p
+    c+=1
+    n=n//10
+for i in range(1,c+1,1):
+    m=cnt%10
+    l=l+m**i
+    cnt=cnt//10
+if t==l:
+    print(True)
+else:
+    print(False)
