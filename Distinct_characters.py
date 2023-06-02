@@ -1,8 +1,7 @@
-n=input().lower()
-s=set(n)
+n=list(input().lower())
 l=[]
-for i in s:
-    if i!=" ":
+for i in n:
+    if n.count(i)==1 and i!=" ":
         l.append(i)
 l1=sorted(l)
 for i in l1:
