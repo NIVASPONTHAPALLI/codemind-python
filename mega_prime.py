@@ -23,4 +23,3 @@ else:
             break
     if(c==s):
         print("Mega Prime")
-        
